@@ -1,0 +1,199 @@
+.s-callback {
+	background-color: #f4f4f4;
+	border: 1px solid transparent;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__heading {
+		color: $accentColor;
+		font-weight: 700;
+	}
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__input {
+		border-radius: 21px;
+		background-color: $lightColor;
+		width: 335px;
+		height: 42px;
+		padding-left: 28px;
+		border: none;
+		outline: none;
+		color: #c8cbcf;
+		font-size: 1rem;
+		font-weight: 400;
+		&::placeholder {
+			color: #c8cbcf;
+		}
+		&:focus{
+			color: $textColor;
+		}
+	}
+
+	&__submit {
+		border-radius: 21px;
+		background-color: $accentColor;
+		width: 140px;
+		height: 42px;
+		color: $lightColor;
+		font-size: 1rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		outline: none;
+		border: 1px solid $accentColor;
+		@include transition;
+		&:hover {
+			background-color: $lightColor;
+			color: $accentColor;
+		}
+	}
+}
+
+@media screen and (max-width: $screen-sm-end) {
+
+	.s-callback {
+
+		&__heading {
+			margin-top: 30px;
+			font-size: 1.71rem;
+		}
+
+		&__form{
+			margin-top: 40px;
+		}
+
+		&__input{
+			width: 80%;
+			margin-top: 15px;
+		}
+
+		&__submit {
+			margin-top: 21px;
+			margin-bottom: 42px;
+		}
+	}
+
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: 779px) {
+
+	.s-callback {
+
+		&__heading {
+			margin-top: 50px;
+			font-size: 2rem;
+		}
+
+		&__form{
+			margin-top: 45px;
+		}
+
+		&__input{
+			width: 80%;
+			margin-top: 15px;
+		}
+
+		&__submit {
+			margin-top: 15px;
+			margin-bottom: 50px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 780px) and (max-width: 982px) {
+
+	.s-callback {
+
+		&__container {
+			margin: 30px auto;
+		}
+
+		&__heading {
+			font-size: 2.14rem;
+		}
+
+		&__form{
+			margin-top: 25px;
+		}
+
+		&__input:first-child{
+			margin-right: 30px;
+		}
+
+		&__submit {
+			margin-top: 25px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 915px) and (max-width: 981px) {
+
+	.s-callback {
+
+		&__input:first-child{
+			margin-right: 100px;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 982px) and (max-width: 1200px) {
+
+	.s-callback {
+
+		&__container {
+			flex-direction: column;
+			justify-content: space-between;
+			margin: 55px auto;
+		}
+
+		&__form {
+			width: 100%;
+			margin-top: 30px;
+			justify-content: space-around;
+		}
+	
+		&__heading {
+			font-size: 2.14rem;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 1201px) {
+
+	.s-callback {
+
+		&__container {
+			justify-content: space-between;
+			margin: 55px auto;
+		}
+
+		&__heading {
+			font-size: 2.14rem;
+		}
+
+		&__form {
+			justify-content: space-between;
+		}
+
+		&__input{
+			margin-right: 20px;
+		}
+	}
+
+}

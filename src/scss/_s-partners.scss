@@ -1,0 +1,260 @@
+.s-partners {
+	background-size: cover;
+	border: 1px solid transparent;
+
+	&__heading {
+		color: $lightColor;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		font-family: $alternateFont;
+		font-size: 1.14rem;
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-top: 50px;
+		max-width: 335px;
+		color: $lightColor;
+	}
+
+	&__logo {
+		background-image: url(../img/s-partners-logo-sprite.png);
+		margin-bottom: 30px;
+	}
+
+	&__logo_1 {
+		width: 165px; 
+		height: 43px;
+    background-position: -10px -172px;
+	}
+
+	&__logo_2 {
+		width: 148px; 
+		height: 50px;
+		background-position:-10px -235px;
+	}
+
+	&__logo_3 {
+		width: 64px; 
+		height: 64px;
+		background-position:-10px -305px;
+	}
+
+	&__logo_4 {
+		width: 231px; 
+		height: 34px;
+		background-position:-10px -10px;
+	}
+
+	&__logo_5 {
+		width: 166px; 
+		height: 34px;
+		background-position:-10px -64px;
+	}
+
+	&__logo_6 {
+		width: 108px; 
+		height: 34px;
+		background-position:-10px -118px;
+	}
+
+	&__footer {
+		text-align: center;
+		position: relative;
+		margin-bottom: 60px;
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			height: 2px;
+			background-color: #645766;
+		}
+	}
+
+	&__footer-text{
+		font-family: $alternateFont;
+		font-size: 14px;
+		font-weight: 400;
+		color: rgba(162, 145, 165, 0.8);
+	}
+
+}
+
+@media screen and (max-width: $screen-sm-end) {
+
+	.s-partners {
+		background-image: url(../img/s-partners-320.png);
+
+		&__heading {
+			margin-top: 61px;
+			font-size: 2.57rem;
+		}
+
+		&__list {
+			margin-top: 50px;
+		}
+
+		&__footer {
+			margin-top: 43px;
+			&::after{
+				bottom: 0;
+			}
+		}
+
+		&__footer-text{
+			display: none;
+		}
+	}
+
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: $screen-md-end) {
+
+	.s-partners {
+		background-image: url(../img/s-partners-480.png);
+
+		&__heading {
+			margin-top: 80px;
+			font-size: 3rem;
+		}
+
+		&__footer {
+			margin-top: 81px;
+		}
+
+		&__footer-text{
+			display: none;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: $screen-lg-start) and (max-width: $screen-lg-end) {
+
+	.s-partners {
+		background-image: url(../img/s-partners-768.png);
+
+		&__heading {
+			margin-top: 83px;
+			font-size: 3rem;
+		}
+
+		&__list {
+			justify-content: space-between;
+		}
+
+		&__item {
+			max-width: 316px;
+		}
+
+		&__footer {
+			margin-top: 58px;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: $screen-xl-start) {
+
+	.s-partners {
+		background-image: url(../img/s-partners-1200.png);
+
+		&__heading {
+			margin-top: 100px;
+			font-size: 3.43rem;
+		}
+
+		&__list {
+			justify-content: space-between;
+		}
+
+		&__item {
+			margin-top: 100px;
+		}
+
+		&__footer {
+			margin-top: 113px;
+		}
+
+	}
+
+}
+
+// Дополнительные брэйкпоинты для адаптации флекса
+@media screen and (min-width: $screen-lg-start) and (max-width: 650px) {
+
+	.s-partners {
+
+		&__list {
+			justify-content: center;
+		}
+	}
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 650px) {
+
+	.s-partners {
+
+		&__list {
+			justify-content: space-between;
+		}
+	}
+
+}
+
+@media screen and (min-width: 748px) and (max-width: 962px) {
+
+	.s-partners {
+
+		&__container {
+			padding: 0 40px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 840px) and (max-width: 970px) {
+
+	.s-partners {
+
+		&__list {
+			justify-content: space-around;
+		}
+	}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1030px) {
+
+	.s-partners {
+
+		&__list {
+			justify-content: center;
+		}
+
+		&__item:nth-child(odd) {
+			margin-right: 100px;
+		}
+
+	}
+
+}

@@ -1,0 +1,210 @@
+@media screen and (min-width: 320px) {
+  .footer {
+    margin-left: 9px;
+    &__logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 100px;
+      margin-top: 36px;
+      .logo__img {
+        display: none;
+      }
+
+      .logo__text {
+        font-family: Montserrat, sans-serif;
+        color: #333333;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        text-transform: uppercase;
+
+        display: inline-block;
+      }
+
+      .logo__text_alternate_color {
+        color: #8d81ac;
+        display: inline-block;
+      }
+      &:hover {
+        color: #ffffff;
+
+        .logo__text_alternate_color {
+          color: #333333;
+        }
+        .logo__text {
+          color: #8d81ac;
+        }
+      }
+
+    }
+    &__description {
+      font-family: Montserrat, sans-serif;
+      color: #848e97;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+    }
+    .title-blocks {
+      font-family: Montserrat, sans-serif;
+      color: #323232;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-top: 38px;
+    }
+    .contact {
+      .title-blocks_size {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 37px;
+        margin-bottom: 15px;
+      }
+    }
+    &__menu {
+			.menu__list {
+				flex-direction: column;
+			}
+      .menu__link {
+        font-family: Montserrat, sans-serif;
+        color: #8d81ac;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        text-align: left;
+        text-decoration: none;
+      }
+      .menu__link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer {
+    margin-left: 25px;
+    &__logo {
+      color: $accentColor;
+      transition: all .4s ease;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 200px;
+      position: relative;
+      margin-bottom: 23px;
+
+      .logo__text {
+        display: inline-block;
+
+        &_alternate_color {
+          display: inline-block;
+        }
+      }
+
+      .logo__img {
+        background-image: url(../img/header_logo.png);
+        width: 43px;
+        height: 41px;
+        transition: all .4s ease;
+        display: block;
+        margin-right: 18px;
+      }
+
+      &:hover {
+        color: #ffffff;
+
+        .logo__img {
+          background-image: url(../img/logoImg_hover.png);
+        }
+
+        .logo__text_alternate_color {
+          color: #333333;
+        }
+
+        .logo__text {
+          color: #8d81ac;
+        }
+      }
+    }
+
+    &__logo:after {
+      content: " ";
+      background-color: rgba(199, 199, 199, 0.2);
+      width: 92vw;
+      height: 1px;
+      display: inline-block;
+      position: absolute;
+      bottom: -10px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .block-logo {
+        width: 48%;
+      }
+      .menu {
+        width: 48%;
+      }
+      .contact {
+        width: 48%;
+      }
+      .info {
+        width: 48%;
+      }
+    }
+    &__logo:after {
+      display: none;
+    }
+    &__description {
+      width: 304px;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .footer {
+    &__container {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .block-logo {
+        width: auto;
+      }
+      .menu {
+        width: auto;
+      }
+      .contact {
+        width: auto;
+      }
+      .info {
+        width: auto;
+      }
+    }
+    &__description {
+      &_width {
+        width: 221px;
+      }
+    }
+    .title-blocks{
+      &-width{
+        width: 150px;
+      }
+    }
+  }
+
+}

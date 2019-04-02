@@ -1,0 +1,326 @@
+.s-reviews {
+
+	//Стилизует навигационные стрелки из плагина owl-carousel
+	.container {
+
+		.owl-carousel {
+
+			.owl-nav {
+				color: #a3a3a3;
+				font-size: 50px;
+
+				.owl-prev{
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				.owl-next{
+					position: absolute;
+					right:  0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+
+
+	&__reviewer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__reviewer-photo{
+		margin-right: 20px;
+		width: 85px;
+		height: 85px;
+	}
+
+	&__reviewer-name {
+		color: #474747;
+		line-height: 1.7;
+		font-size: 1.71rem;
+		font-weight: 700;
+	}
+
+	&__reviewer-nickname {
+		color: $accentColor;
+		font-size: 1.14rem;
+		font-weight: 400;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	&__comment {
+		text-align: center;
+		font-family: $alternateFont;
+		color: #333333;
+		padding: 20px;
+		line-height: 1.4;
+	}
+
+	&__reference {
+		color: $accentColor;
+	}
+
+	&__time {
+		display: block;
+		font-size: 1.14rem;
+		font-weight: 400;
+		color: $textColor;
+	}
+
+	&__decor-line {
+		margin: 0 auto 60px;
+		height: 1px;
+		width: 80%;
+		background-color: #f3f3f3;
+	}
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.social-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+
+	&__followers {
+		margin-top: 18px;
+		font-size: 1rem;
+		font-weight: 400;
+		color: $textColor;
+	}
+}
+
+.social-btn {
+	text-align: left;
+	width: 240px;
+	height: 50px;
+	outline: none;
+	font-size: 21px;
+	font-weight: 400;
+	border-radius: 4px;
+	cursor: pointer;
+	@include transition;
+
+	&_github{
+		border: none;
+		background-color: #f3f3f3;
+		color: #000000;
+		&:hover{
+			background-color: #2b414d;
+			color: $lightColor;
+		}
+	}
+
+	&_twitter{
+		border: 1px solid #26a6d1;
+		background-color: #26a6d1;
+		color: $lightColor;
+		&:hover{
+			background-color: $lightColor;
+			color: #26a6d1;
+		}
+	}
+
+	&_facebook {
+		border: 1px solid #3b5998;
+		background-color: #3b5998;
+		color: $lightColor;
+		&:hover{
+			background-color: $lightColor;
+			color: #3b5998;
+		}
+	}
+
+	.fab {
+		padding-left: 25px;
+		padding-right: 38px;
+	}
+	
+}
+
+@media screen and (max-width: $screen-sm-end) {
+
+	.s-reviews {
+
+		&__reviewer {
+			flex-direction: column;
+		}
+
+		&__reviewer-photo {
+			margin-top: 60px;
+		}
+
+		&__reviewer-info {
+			margin-top: 25px;
+			text-align: center;
+		}
+
+		&__comment {
+			margin-top: 25px;
+			font-size: 1.14rem;
+		}
+
+		&__time {
+			margin-top: 15px;
+		}
+
+		&__decor-line {
+			display: none;
+		}
+	}
+
+	.social-links {
+		margin-top: 35px;
+	}
+
+	.social-item {
+		margin-bottom: 30px;
+	}
+
+	.social-btn {
+		width: 280px;
+		height: 50px;
+	}
+
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: 549px) {
+
+	.s-reviews {
+
+		&__reviewer {
+			margin-top: 120px;
+		}
+
+		&__comment {
+			margin-top: 40px;
+			font-size: 1.14rem;
+		}
+
+		&__time {
+			margin-top: 25px;
+		}
+
+		&__decor-line {
+			display: none;
+		}
+
+	}
+
+	.social-links {
+		margin-top: 55px;
+	}
+
+	.social-item {
+		margin-bottom: 30px;
+	}
+
+	.social-btn {
+		width: 280px;
+		height: 50px;
+	}
+
+}
+
+@media screen and (min-width: 550px) and (max-width: $screen-lg-end) {
+
+	.s-reviews {
+
+		&__reviewer {
+			margin-top: 50px;
+		}
+
+		&__comment {
+			margin-top: 50px;
+			font-size: 1.43rem;
+		}
+
+		&__time {
+			margin-top: 30px;
+		}
+
+		&__decor-line {
+			display: block;
+			margin-top: 22px;
+		}
+
+	}
+
+	.social-links {
+		margin-bottom: 70px;
+	}
+
+	.social-item {
+		margin-bottom: 30px;
+		&:first-child {
+			padding-right: 50px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 790px) and (max-width: $screen-lg-end) {
+
+	.social-item {
+		padding-right: 50px;
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+
+}
+
+@media screen and (min-width: $screen-xl-start) {
+
+	.s-reviews {
+
+		&__reviewer {
+			margin-top: 85px;
+		}
+
+		&__comment {
+			margin-top: 50px;
+			font-size: 1.43rem;
+		}
+
+		&__time {
+			margin-top: 30px;
+		}
+
+		&__decor-line {
+			display: block;
+			margin-top: 55px;
+		}
+
+	}
+
+	.social-links {
+		margin-bottom: 70px;
+	}
+
+	.social-item {
+		padding-right: 50px;
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+
+}

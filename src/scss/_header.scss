@@ -1,0 +1,268 @@
+.top-header {
+	background-color: #27262a;
+	color: #ffffff;
+	font-weight: 700;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__logo {
+		display: flex;
+		height: 41px;
+		line-height: 41px;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover .top-header__logoimg {
+			background-image: url(../img/header_logo_hovered.png);
+		}
+
+		&:hover .top-header__logotext {
+			color: $lightColor;
+		}
+	}
+
+	&__logoimg {
+		background-image: url(../img/header_logo.png);
+		width: 43px;
+		height: 41px;
+		font-size: 1.71rem;
+		@include transition;
+	}
+
+	&__logotext {
+		font-size: 24px;
+		color: $accentColor;
+		margin-left: 13px;
+		@include transition;
+	}
+
+	&__burger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 26px;
+		height: 21px;
+	}
+
+	&__line {
+		position: relative;
+		height: 3px;
+		background-color: $lightColor;
+		border-radius: 10px;
+		transition: all 0.5s linear;
+		&_short {
+			width: 20px;
+			align-self: flex-end;
+		}
+	}
+	
+	&__button {
+		background-color: $accentColor;
+		color: $lightColor;
+		&:hover {
+			background-color: $lightColor;
+			color: $accentColor;
+		}
+	}
+
+	&_hidden-burger {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: $screen-sm-end) {
+	
+	.top-header {
+		height: 103px;
+
+		&__container {
+			height: inherit;
+		}
+
+		&__logotext {
+			display: none;
+		}
+
+		&__button {
+			width: 119px;
+			height: 37px;
+			line-height: 37px;
+			font-size: 1.07rem;
+		}
+
+	}
+	
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: $screen-md-end) {
+	
+	.top-header {
+		height: 103px;
+
+		&__container {
+			height: inherit;
+		}
+
+		&__button {
+			width: 130px;
+			height: 44px;
+			line-height: 44px;
+			font-size: 1.21rem;
+		}
+	}
+	
+}
+
+//Чтобы отдельно не прописывать бургер-меню для двух разрешений, стилизуем его для всех разрешений до 480px.
+@media screen and (max-width: $screen-md-end) {
+
+	.top-header {
+
+		&__menu {
+			position: fixed;
+			z-index: 999;
+			top: 103px;
+			width: 100%;
+			right: -1000px;
+			transition: all 0.7s linear;
+		}
+
+		.menu__list {
+			flex-direction: column;
+		}
+
+		.menu__link {
+			display: block;
+			position: relative;
+			padding-left: 37px;
+			height: 103px;
+			line-height: 103px;
+			background-color: #333333;
+			color: $lightColor;
+			font-weight: 400;
+			font-size: 2.29rem;
+			border-bottom: 2px solid #3b3b3b;
+			@include transition;
+			&:hover {
+				color: $accentColor;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 24px;
+					width: 4px;
+					height: 53px;
+					background-color: $accentColor;
+				}
+			}
+		}
+
+		&_hidden-burger:checked ~ &__menu {
+			right: 0;
+		}
+
+		&_hidden-burger:checked ~ &__burger div.top-header__line:nth-of-type(1) {
+			transform: rotate(45deg);
+			top: 9px;
+			width: 26px;
+		}
+
+		&_hidden-burger:checked ~ &__burger div.top-header__line:nth-of-type(2) {
+			opacity: 0;
+		}
+
+		&_hidden-burger:checked ~ &__burger div.top-header__line:nth-of-type(3) {
+			transform: rotate(-45deg);
+			top: -9px;
+		}
+
+	}
+}
+
+@media screen and (min-width: $screen-lg-start) and (max-width: 1020px) {
+	
+	.top-header {
+		height: 118px;
+
+		&__container {
+			height: inherit;
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__button {
+			width: 145px;
+			height: 38px;
+			line-height: 38px;
+			font-size: 1.14rem;
+		}
+
+		&__menu {
+			width: 100%;
+		}
+
+		.menu__item:nth-of-type(1) {
+			display: none;
+		}
+		
+	}
+	
+}
+
+@media screen and (min-width: 1021px) {
+
+	.top-header {
+		height: 100px;
+		position: relative;
+
+		&__container {
+			height: inherit;
+			justify-content: flex-end;
+		}
+
+		&__logo {
+			position: absolute;
+			left: 90px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__button {
+			order: 3;
+			width: 145px;
+			height: 38px;
+			line-height: 38px;
+			font-size: 1.14rem;
+		}
+
+		&__menu {
+			order: 2;
+		}
+
+		.menu__list {
+			align-self: flex-end;
+			margin-left: 300px;
+		}
+
+		.menu__link {
+			padding-right: 34px;
+		}
+
+		.menu__item:nth-of-type(1) {
+			display: none;
+		}
+
+	}
+}

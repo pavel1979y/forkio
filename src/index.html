@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	
+	<header class="top-header"> 
+
+  	<div class="container top-header__container">
+
+			<a href="#" class="logo top-header__logo"> <div class="top-header__logoimg"></div> <p class="top-header__logotext">Forkio</p></a>
+			
+			<!-- Официальная документация BEM (https://ru.bem.info/methodology/css/) предполагает возможность создания миксов.
+			В данном случае .button - блок с общими стилями, характерными для всех кнопок, .top-header__button - микс для 
+			индивидуальных стилей-->
+
+			<div class="button top-header__button">Buy Now</div>
+
+			<input type="checkbox" id="burger" class="top-header_hidden-burger">
+
+			<label class="top-header__burger" for="burger">
+				<div class="top-header__line top-header__line_short"></div>
+				<div class="top-header__line"></div>
+				<div class="top-header__line"></div>
+			</label>
+
+				<!-- Официальная документация BEM (https://ru.bem.info/methodology/html/) в своих примерах предусматривает такую структуру 
+		классов для задания структуры и стилей меню -->
+
+			<div class="menu top-header__menu">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Overview</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">About Fork</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Buying options</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Support</a></li>
+				</ul>
+			</div>
+
+			
+		</div>
+	</header>
+
+	<section class="s-banner">
+		<div class="container s-banner__container">
+			<h1 class="s-banner__heading">Fork App</h1>
+			<p class="s-banner__description">A real gamechanger in the world of web development</p>
+			<p class="s-banner__platform">v. 2.8 For Mac and Windows</p>
+			<div class="s-banner__download">
+				<button class="s-banner__download-button">Download For Free Now</button>
+				<p class="s-banner__download-text">Unlimited 30-Days Trial Period</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-statistics">
+		<div class="container s-statistics__container">
+			<h2 class="s-statistics__heading">Revolutionary editor</h2>
+			<p class="s-statistics__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+			<div class="s-statistics__stats-wrapper">
+				<div class="s-statistics__item">
+					<div class="s-statistics__icon  s-statistics__icon_watch">
+						<svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+						Watch
+					</div>
+					<div class="s-statistics__number">1,397</div>
+				</div>
+				<div class="s-statistics__item">
+					<div class="s-statistics__icon  s-statistics__icon_star">
+						<svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+						Star
+					</div>
+					<div class="s-statistics__number">21,038</div>
+				</div>
+				<div class="s-statistics__item">
+					<div class="s-statistics__icon s-statistics__icon_york">
+						<svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10"
+						height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993
+						1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993
+						1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2
+						0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2
+						0 .65-.55 1.2-1.2 1.2z"></path></svg>
+						York
+					</div>
+					<div class="s-statistics__number">4,391</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  
+  <section class="s-about-app">
+    <div class="container s-about-app__container">
+
+			<h2 class="s-about-app__heading">&#60Here is what  you get&#62</h2>
+			
+			<div class="s-about-app__list">
+
+				<div class="s-about-app__item">
+					<div class="s-about-app__icon"><img src="img/icon0.png"></div>
+					<div class="s-about-app__text">
+						<h3 class="s-about-app__subheading">Creatred to Make The Web Better</h3>
+						<div class="s-about-app__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </div>
+					</div>
+				</div>
+
+				<div class="s-about-app__item">
+					<div class="s-about-app__icon"><img src="img/icon1.png"></div>
+					<div class="s-about-app__text">
+						<h3 class="s-about-app__subheading">Incredibly Powerful Tool</h3>
+						<div class="s-about-app__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </div>
+					</div>
+				</div>
+
+				<div class="s-about-app__item">
+					<div class="s-about-app__icon"><img src="img/icon2.png"></div>
+					<div class="s-about-app__text">
+						<h3 class="s-about-app__subheading">Experimental Stuff</h3>
+						<div class="s-about-app__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </div>
+					</div>
+				</div>
+
+				<div class="s-about-app__item">
+					<div class="s-about-app__icon"><img src="img/icon3.png"></div>
+					<div class="s-about-app__text">
+						<h3 class="s-about-app__subheading">Creatred to Make The Web Better</h3>
+						<div class="s-about-app__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="s-about-app__visual"><img class="s-about-app__image" src="img/editor768.png"></div>
+
+		</div>
+	</section>
+
+	<section class="s-reviews">
+		<div class="container">
+
+			<div class="owl-carousel s-reviews__carousel">
+
+				<div class="s-reviews__item">
+
+					<div class="s-reviews__reviewer">
+						<div class="s-reviews__reviewer-photo"><img src="img/userpic.png"></div>
+						<div class="s-reviews__reviewer-info">
+							<h5 class="s-reviews__reviewer-name">Steven Strange</h5>
+							<span class="s-reviews__reviewer-nickname">@DoctorS</span>
+						</div>
+					</div>
+
+					<div class="s-reviews__content">
+						<p class="s-reviews__comment"><span class="s-reviews__reference">@Pixelbuddha</span> Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.</p>
+						<span class="s-reviews__time">2 hours ago</span>
+					</div>
+
+				</div>
+
+				<div class="s-reviews__item">
+
+					<div class="s-reviews__reviewer">
+						<div class="s-reviews__reviewer-photo"><img src="img/userpic.png"></div>
+						<div class="s-reviews__reviewer-info">
+							<h5 class="s-reviews__reviewer-name">Steven Strange</h5>
+							<span class="s-reviews__reviewer-nickname">@DoctorS</span>
+						</div>
+					</div>
+
+					<div class="s-reviews__content">
+						<p class="s-reviews__comment"><span class="s-reviews__reference">@Pixelbuddha</span> Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.</p>
+						<span class="s-reviews__time">2 hours ago</span>
+					</div>
+
+				</div>
+
+				<div class="s-reviews__item">
+
+					<div class="s-reviews__reviewer">
+						<div class="s-reviews__reviewer-photo"><img src="img/userpic.png"></div>
+						<div class="s-reviews__reviewer-info">
+							<h5 class="s-reviews__reviewer-name">Steven Strange</h5>
+							<span class="s-reviews__reviewer-nickname">@DoctorS</span>
+						</div>
+					</div>
+
+					<div class="s-reviews__content">
+						<p class="s-reviews__comment"><span class="s-reviews__reference">@Pixelbuddha</span> Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.</p>
+						<span class="s-reviews__time">2 hours ago</span>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="s-reviews__decor-line"></div>
+
+			<div class="social-links">
+
+				<div class="social-item">
+					<button class="social-btn social-btn_github"><i class="fab fa-github"></i><span class="social-btn__title">GitHub</span></button>
+					<span class="social-item__followers">7 352 Followers</span>
+				</div>
+
+				<div class="social-item">
+					<button class="social-btn social-btn_twitter"><i class="fab fa-twitter"></i><span class="social-btn__title">Twitter</span></button>
+					<span class="social-item__followers">136 312 Followers</span>
+				</div>
+
+				<div class="social-item">
+					<button class="social-btn social-btn_facebook"><i class="fab fa-facebook-f"></i><span class="social-btn__title">Facebook</span></button>
+					<span class="social-item__followers">218 092 Subscribers</span>
+				</div>
+
+
+			</div>
+
+		</div>
+	</section>
+
+    
+  <section class="s-partners">
+		<div class="container s-partners__container">
+			<h2 class="s-partners__heading">People Are Talking About Fork</h2>
+			<div class="s-partners__list">
+				<div class="s-partners__item">
+					<div class="s-partners__logo s-partners__logo_1"></div>
+					<div class="s-partners__description">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </div>
+				</div>
+				<div class="s-partners__item">
+					<div class="s-partners__logo  s-partners__logo_2"></div>
+					<div class="s-partners__description">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</div>
+				</div>
+				<div class="s-partners__item">
+					<div class="s-partners__logo  s-partners__logo_3"></div>
+					<div class="s-partners__description">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </div>
+				</div>
+				<div class="s-partners__item">
+					<div class="s-partners__logo  s-partners__logo_4"></div>
+					<div class="s-partners__description">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </div>
+				</div>
+				<div class="s-partners__item">
+					<div class="s-partners__logo  s-partners__logo_5"></div>
+					<div class="s-partners__description">Praesent ut eros tristique, malesuada lectus vel, lobortis massa. Nulla faucibus lorem id arcu consequat faucibus. </div>
+				</div>
+				<div class="s-partners__item">
+					<div class="s-partners__logo  s-partners__logo_6"></div>
+					<div class="s-partners__description">Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</div>
+				</div>
+			</div>
+
+			<div class="s-partners__footer">
+				<p class="s-partners__footer-text">
+					Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s-prices">
+		<div class="container s-prices__container">
+
+			<div class="s-prices__heading">Fork Subscription Pricing</div>
+
+			<ul class="s-prices__list">
+
+				<li class="s-prices__item">
+					<h3 class="s-prices__item-heading">Students</h3>
+					<div class="s-prices__item-content">
+						<span class="s-prices__item-price">$29</span>
+						<span class="s-prices__item-payment-period">per month</span>
+						<span class="s-prices__item-decor-line"></span>
+						<span class="s-prices__item-description">Personal License</span>
+						<button class="button s-prices__item-button s-prices__item-button_lower">Purchase</button>
+					</div>
+				</li>
+
+				<li class="s-prices__item">
+					<h3 class="s-prices__item-heading">Professional</h3>
+					<div class="s-prices__item-content">
+						<span class="s-prices__item-price">$59</span>
+						<span class="s-prices__item-payment-period">per month</span>
+						<span class="s-prices__item-decor-line"></span>
+						<span class="s-prices__item-description">Professional License Email Support</span>
+						<button class="button s-prices__item-button">Purchase</button>
+					</div>
+				</li>
+
+				<li class="s-prices__item s-prices__item_dark">
+					<h3 class="s-prices__item-heading">Agency</h3>
+					<div class="s-prices__item-content">
+						<span class="s-prices__item-price">$99</span>
+						<span class="s-prices__item-payment-period">per month</span>
+						<span class="s-prices__item-decor-line"></span>
+						<span class="s-prices__item-description">1-12 Team Members Phone Support</span>
+						<button class="button s-prices__item-button">Purchase</button>
+					</div>	
+				</li>
+
+				<li class="s-prices__item">
+					<h3 class="s-prices__item-heading">Enterprice</h3>
+					<div class="s-prices__item-content">
+						<span class="s-prices__item-price">$159</span>
+						<span class="s-prices__item-payment-period">per month</span>
+						<span class="s-prices__item-decor-line"></span>
+						<span class="s-prices__item-description">Unlimited Team Members 24/ 7 Phone Support</span>
+						<button class="button s-prices__item-button">Purchase</button>
+					</div>
+				</li>
+
+			</ul>
+
+		</div>
+	</section>
+
+
+
+	
+	<section class="s-callback">
+  
+		<div class="container s-callback__container">
+			<div class="s-callback__heading">Order callbak</div>
+			<form class="s-callback__form">
+					<input class="s-callback__input" placeholder="Your name" name="user">
+					<input class="s-callback__input" placeholder="Phone" name="user">
+					<input class="s-callback__submit" type="submit" value="call me!">
+			</form>
+		</div>
+	</section>
+
+
+<footer class="footer">
+  <div class="container footer__container">
+
+    <div class="block-logo">
+      <a class="logo footer__logo" href="#">
+        <div class="logo__img"></div>
+        <span class="logo__text">Fork<span class="logo__text_alternate_color">io</span></span>
+      </a>
+      <div class="footer__description">Lorem ipsum dolor sit amet, feugiat delicat liberavisse id cum no quo </div>
+    </div>
+        <div class="menu footer__menu">
+            <h5 class="title-blocks title-blocks-width">Navigation</h5>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Overview</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">About Fork</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Buying options</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Support</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h5 class="title-blocks title-blocks_size">
+                347 567 78 90
+            </h5>
+            <p class="footer__description footer__description_width">AVAILABLE AT 12PM - 18PM</p>
+            <h5 class="title-blocks">
+                New York_ NY
+            </h5>
+            <p class="footer__description footer__description_width">
+                560 Judah St & 15th Ave_ Apt 5 San Francisco_ CA_ 230903
+            </p>
+        </div>
+        <div class="info">
+            <h5 class="title-blocks">Info</h5>
+            <p class="footer__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem, dolore eius est explicabo
+                facere laboriosam laborum laudantium magni minus natus nihil omnis optio placeat, quas, recusandae rerum
+                sed tenetur.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/common.min.js"></script>
+
+</body>
+
+</html>

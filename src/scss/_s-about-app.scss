@@ -1,0 +1,230 @@
+.s-about-app {
+	background-color: #f4f4f4;
+	position: relative;
+	overflow: hidden;
+	font-family: $defaultFont;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__heading {
+		text-align: center;
+		color: $accentColor;
+		font-weight: 700;
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__icon {
+		text-align: center;
+		margin-right: 30px;
+		min-width: 150px;
+	}
+
+	&__text {
+		line-height: 1.4;
+	}
+
+	&__subheading {
+		margin-bottom: 20px;
+		color: $textHeadingColor;
+		font-weight: 500;
+	}
+
+	&__description {
+		color: $textColor;
+		font-weight: 500;
+	}
+
+	&__visual {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: $screen-sm-end) {
+	.s-about-app {
+
+		&__container{
+			padding: 0 15px;
+		}
+		
+		&__heading {
+			margin-top: 37px;
+			margin-bottom: 34px;
+			font-size: 2.29rem;
+		}
+
+		&__item {
+			flex-direction: column;
+			margin-bottom: 37px;
+		}
+
+		&__icon {
+			margin-bottom: 30px;
+			margin-right: 0;
+		}
+
+		&__text {
+			text-align: center;
+		}
+
+		&__visual {
+			height: 360px;
+		}
+
+		&__image {
+			position: absolute;
+			height: 360px;
+			bottom: 0;
+			right: -200px;
+		}
+	}
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: $screen-md-end) {
+
+	.s-about-app {
+
+		&__container{
+			padding: 0 27px;
+		}
+		
+		&__heading {
+			margin-top: 50px;
+			margin-bottom: 68px;
+			font-size: 3rem;
+		}
+
+		&__item {
+			margin-bottom: 45px;
+		}
+
+		&__visual {
+			height: 500px;
+		}
+
+		&__image {
+			position: absolute;
+			height: 500px;
+			bottom: 0;
+			right: -330px;
+		}
+	}
+
+}
+
+@media screen and (min-width: $screen-lg-start) and (max-width: 1270px) {
+
+	.s-about-app {
+
+		&__container{
+			padding: 0 20px;
+		}
+		
+		&__heading {
+			margin-top: 57px;
+			margin-bottom: 68px;
+			font-size: 3rem;
+		}
+
+		&__item {
+			margin-bottom: 60px;
+		}
+
+		&__visual {
+			height: 500px;
+		}
+
+		&__image {
+			position: absolute;
+			height: 500px;
+			bottom: 0;
+			right: -200px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 1271px) {
+
+	.s-about-app {
+
+		&__container{
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin: 85px auto;
+		}
+		
+		&__heading {
+			order: 2;
+			font-size: 3.4rem;
+			justify-self: flex-end;
+			text-align: right;
+		}
+
+		&__list {
+			order: 1;
+			width: 33vw;
+		}
+
+		&__item {
+			margin-bottom: 50px;
+		}
+
+		&__visual {
+			order: 3;
+			display: flex;
+			justify-content: center;
+		}
+
+		&__image {
+			position: absolute;
+			top: 180px;
+			right: 0;
+		}
+
+	}
+
+}
+
+// Промежуточные разрешения для бОльшей адаптивности
+
+@media screen and (min-width: 1400px) {
+
+	.s-about-app {
+
+		&__image {
+			position: absolute;
+			top: 180px;
+			right: 50px;
+		}
+	}
+}
+
+@media screen and (min-width: 740px) and (max-width: 1270px) {
+
+	.s-about-app {
+
+		&__visual {
+			height: 500px;
+		}
+
+		&__image {
+			position: absolute;
+			height: 500px;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+	}
+	
+}
+

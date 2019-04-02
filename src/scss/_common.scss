@@ -1,0 +1,46 @@
+body {
+	font-family: $defaultFont;
+	font-size: 14px;
+	width: 100%;
+}
+
+.container {
+	padding: 0 $container-r-l-padding 0;
+	max-width: $maxWidth;
+	margin: 0 auto;
+}
+
+.button {
+	cursor: pointer;
+	text-align: center;
+	border-radius: 100vh;
+	outline: none;
+	@include transition;
+}
+
+.menu {
+
+	&__list {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	&__link {
+		text-decoration: none;
+		color: $accentColor;
+		font-size: 1.14rem;
+		@include transition;
+		&:hover{
+			color: $lightColor;
+		}
+	}
+
+}
+
+@media screen and (max-width: 319px) {
+
+	body {
+		display: none;
+	}
+
+}

@@ -1,0 +1,32 @@
+$defaultFont: 'montserrat', sans-serif;
+$alternateFont: 'Lato', sans-serif;
+$baseFontSize: 14px;
+
+$accentColor: #8d81ac;
+$lightColor: #ffffff;
+$textHeadingColor: #323232;
+$textColor: #848e97;
+
+$maxWidth: 1200px;
+$screen-sm-end: 400px;
+$screen-md-start: 401px;
+$screen-md-end: 480px;
+$screen-lg-start: 481px;
+$screen-lg-end: 992px;
+$screen-xl-start: 993px;
+$container-r-l-padding: 10px;
+
+
+/*
+@media screen and (max-width: $screen-sm-end) {
+}
+
+@media screen and (min-width: $screen-md-start) and (max-width: $screen-md-end) {
+}
+
+@media screen and (min-width: $screen-lg-start) and (max-width: $screen-lg-end) {
+}
+
+@media screen and (min-width: $screen-xl-start) {
+}
+*/
